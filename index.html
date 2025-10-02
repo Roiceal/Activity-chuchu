@@ -23,9 +23,8 @@
         sessionStorage.setItem("username", username);
         sessionStorage.setItem("password", password);
 
-        document.getElementById("message").textContent = "Account created! Redirecting...";
+        document.getElementById("message").textContent = "Please wait...";
 
-        // Redirect to login.html after 1.5 seconds
         setTimeout(() => {
           window.location.href = "login.html";
         }, 1500);
