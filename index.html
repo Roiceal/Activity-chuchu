@@ -19,10 +19,17 @@
       const password = document.getElementById("new-password").value;
 
       if (username && password) {
+        // Save temporarily in sessionStorage
         sessionStorage.setItem("username", username);
         sessionStorage.setItem("password", password);
 
-        document.getElementById("message").textContent = "Account created! Go to login.html";
+        document.getElementById("message").textContent = "Account created! Redirecting...";
+
+        // Redirect to login.html after 1.5 seconds
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 1500);
+
       } else {
         document.getElementById("message").textContent = "Please fill in both fields.";
       }
